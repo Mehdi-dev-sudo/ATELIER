@@ -99,9 +99,7 @@ No libraries. No build tools. Just mastery of fundamentals.
 
 ## 🌍 Live Demo (Optional)
 
-If hosted with GitHub Pages:
-
-(https://Mehdi-dev-sudo.github.io/ATELIER/)
+[Live Demo](https://mehdi-dev-sudo.github.io/ATELIER/)
 
 ---
 
