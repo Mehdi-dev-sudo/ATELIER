@@ -114,7 +114,7 @@ Free to use or adapt — attribution appreciated.
 
 ## 👤 Author
 
-**Mehdi Khorshidi** — Front-End Developer
+**Mehdi Khorshidi Far** — Front-End Developer
 GitHub: [Mehdi-dev-sudo](https://github.com/Mehdi-dev-sudo)
 
 > "Simplicity is the ultimate sophistication." — Leonardo da Vinci
