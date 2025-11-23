@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER - Design Portfolio System</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional portfolio system with CMS capabilities">
+    <meta property="og:title" content="ATELIER Portfolio System">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loader"></div>
+            <p class="loading-text">Loading Experience...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Enhanced Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">ATELIER</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#journal" class="nav-link">Journal</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle Theme">
+                <span class="theme-icon">◐</span>
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-menu">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#work" class="mobile-nav-link">Work</a></li>
+                <li><a href="#journal" class="mobile-nav-link">Journal</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">We craft</span>
+                    <span class="title-line italic">timeless</span>
+                    <span class="title-line">experiences</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A design studio dedicated to creating <em>meaningful</em> and <em>beautiful</em>
+                    digital experiences that stand the test of time.
+                </p>
+            </div>
+            <div class="hero-cta">
+                <a href="#work" class="cta-button">
+                    <span>View Our Work</span>
+                    <div class="button-line"></div>
+                </a>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-element"></div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">About Our Philosophy</h2>
+                    <div class="philosophy-text">
+                        <p class="philosophy-intro">
+                            We believe that <em>great design</em> is not about adding more,
+                            but about finding the perfect balance between form and function.
+                        </p>
+                        <p>
+                            Our approach combines classical design principles with contemporary
+                            sensibilities, creating work that feels both timeless and fresh.
+                        </p>
+                        <p class="philosophy-quote">
+                            "Simplicity is the ultimate sophistication."
+                            <span class="quote-author">— Leonardo da Vinci</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="127">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="43">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Work Section with Filters -->
+    <section id="work" class="work-section">
+        <div class="container">
+            <h2 class="section-title centered">Selected Works</h2>
+
+            <!-- Work Filters -->
+            <div class="work-filters">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="editorial">Editorial</button>
+                <button class="filter-btn" data-filter="digital">Digital Art</button>
+            </div>
+
+            <!-- Works Grid -->
+            <div class="works-grid" id="worksGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="" id="modalImage">
+                </div>
+                <div class="modal-info">
+                    <h3 class="modal-title" id="modalTitle"></h3>
+                    <p class="modal-category" id="modalCategory"></p>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Client</span>
+                            <span class="detail-value" id="modalClient"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Year</span>
+                            <span class="detail-value" id="modalYear"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Services</span>
+                            <span class="detail-value" id="modalServices"></span>
+                        </div>
+                    </div>
+                    <div class="modal-tags" id="modalTags"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Journal Section -->
+    <section id="journal" class="journal-section">
+        <div class="container">
+            <h2 class="section-title">Latest Thoughts</h2>
+            <div class="journal-grid" id="journalGrid">
+                <!-- Journal posts will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Working Form -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h2 class="section-title">Let's Create Something Beautiful</h2>
+                    <p class="contact-description">
+                        We'd love to hear about your project and explore how we can bring
+                        your vision to life with thoughtful design.
+                    </p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading">Sending...</span>
+                    </button>
+
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+
+            <div class="contact-info-section">
+                <div class="contact-item">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:hello@atelier.studio" class="contact-link">hello@atelier.studio</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Phone</span>
+                    <a href="tel:+1234567890" class="contact-link">+1 (234) 567-890</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-text">New York, NY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-text">ATELIER</span>
+                    <p class="footer-tagline">Crafting timeless experiences since 2016</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Studio</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Services</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#branding">Branding</a></li>
+                            <li><a href="#web">Web Design</a></li>
+                            <li><a href="#print">Print</a></li>
+                            <li><a href="#strategy">Strategy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Connect</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#instagram" target="_blank">Instagram</a></li>
+                            <li><a href="#dribbble" target="_blank">Dribbble</a></li>
+                            <li><a href="#behance" target="_blank">Behance</a></li>
+                            <li><a href="#linkedin" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Atelier Studio. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <span>↑</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
